@@ -21,9 +21,9 @@ For the toasts notifications, use the [react-toastify](https://github.com/fkhadr
 * You will only have one state and that state will live in App.
 * Implement lifecycle methods to fire the created/deleted notification.
 
---
+---
 
---
+---
 
 ## This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
