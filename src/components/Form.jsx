@@ -6,7 +6,7 @@ Form Component | TodosToaster Lab
 
 /* IMPORTS */
 import React from 'react';
-// import './Form.css';
+import './Form.css';
 
 
 /* MAIN */
@@ -37,8 +37,9 @@ class Form extends React.Component {
       <header>
         <h1>Todos Toaster</h1>
       </header>
+      <p id="instructions">fill out a new todo entry below and hit <strong>enter</strong> to submit</p>
       <form onSubmit={this.handleSubmit}>
-        <input type="text" id="txtInput" value={txtInput} onChange={this.handleChange} />
+        <input type="text" id="txtInput" value={txtInput} onChange={this.handleChange} placeholder="New Todo Item" />
       </form>
       </>
     )

@@ -6,18 +6,20 @@ APP | Todos Toaster Lab
 
 /* IMPORTS */
 import React from 'react';
+import './App.css';
 import Form from './components/Form';
 import TodosList from './components/TodosList';
 
-import './App.css';
 
 
 /* MAIN */
 function App() {
   return (
     <div className="App">
-      <Form />
-      <TodosList />
+      <div id="flex-base">
+        <Form />
+        <TodosList />
+      </div>
     </div>
   );
 }

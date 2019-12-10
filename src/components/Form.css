@@ -4,3 +4,12 @@ Form Css | TodosToaster Lab
 */
 
 
+h1 {
+	font-size: 3em;
+	margin: 36px 12px;
+}
+
+p#instructions {
+  margin: 12px;
+  font-size: 1em;
+}
