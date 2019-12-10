@@ -20,6 +20,7 @@ class TodosList extends Component {
     return(
       <ul>
         <TodoItem />
+        <TodoItem />
       </ul>
     )
   }

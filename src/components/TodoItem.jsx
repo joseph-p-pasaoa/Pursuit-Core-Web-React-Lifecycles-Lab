@@ -26,7 +26,7 @@ class TodoItem extends Component {
     const { value } = this.state;
     return(
       <li>
-        <p className="todoValue">Test This is a Test of the Emergency Broadcast System{value}</p>
+        <p className="todoValue">This Needs a Test of the Emergency Broadcast System So That's on the Itinerary{value}</p>
         <button type="button" id="btnDel" onClick={this.handleClick}>x</button>
       </li>
     )
