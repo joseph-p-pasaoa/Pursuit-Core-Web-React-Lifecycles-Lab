@@ -4,3 +4,10 @@ TodosList Css | TodosToaster Lab
 */
 
 
+ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}

@@ -5,12 +5,12 @@ TodoItem Component | TodosToaster Lab
 
 
 /* IMPORTS */
-import React from 'react';
-// import './TodoItem.css';
+import React, { Component } from 'react';
+import './TodoItem.css';
 
 
 /* MAIN */
-class TodoItem extends React.Component {
+class TodoItem extends Component {
   constructor() {
     super();
     this.state = {
@@ -26,8 +26,8 @@ class TodoItem extends React.Component {
     const { value } = this.state;
     return(
       <li>
-        <p>{value}</p>
-        <button type="button" id="btnDel" onClick={this.handleClick}>-</button>
+        <p className="todoValue">Test This is a Test of the Emergency Broadcast System{value}</p>
+        <button type="button" id="btnDel" onClick={this.handleClick}>x</button>
       </li>
     )
   }

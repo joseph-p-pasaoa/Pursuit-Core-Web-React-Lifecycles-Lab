@@ -5,12 +5,12 @@ Form Component | TodosToaster Lab
 
 
 /* IMPORTS */
-import React from 'react';
+import React, { Component } from 'react';
 import './Form.css';
 
 
 /* MAIN */
-class Form extends React.Component {
+class Form extends Component {
   constructor() {
     super();
     this.initialState = {

@@ -4,3 +4,21 @@ TodoItem Css | TodosToaster Lab
 */
 
 
+li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: aliceblue;
+}
+
+p.todoValue {
+  width: 350px;
+  margin: 6px 12px;
+}
+
+button {
+  margin: 6px;
+}

@@ -5,13 +5,13 @@ TodosList Component | TodosToaster Lab
 
 
 /* IMPORTS */
-import React from 'react';
+import React, { Component } from 'react';
 import TodoItem from './TodoItem';
-// import './TodosList.css';
+import './TodosList.css';
 
 
 /* MAIN */
-class TodosList extends React.Component {
+class TodosList extends Component {
   // constructor() {
   //   super();
   // }
