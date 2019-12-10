@@ -1,13 +1,13 @@
 /*
 Joseph P. Pasaoa
-APP | ToDos Toaster Lab
+APP | Todos Toaster Lab
 */
 
 
 /* IMPORTS */
 import React from 'react';
-// import Form from './components/Form';
-// import TodosList from './components/TodosList';
+import Form from './components/Form';
+import TodosList from './components/TodosList';
 
 import './App.css';
 
@@ -16,8 +16,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <Form /> */}
-      {/* <TodosList /> */}
+      <Form />
+      <TodosList />
     </div>
   );
 }
