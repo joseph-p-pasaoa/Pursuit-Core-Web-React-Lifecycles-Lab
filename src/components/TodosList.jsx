@@ -6,6 +6,7 @@ TodosList Component | TodosToaster Lab
 
 /* IMPORTS */
 import React from 'react';
+import TodoItem from './TodoItem';
 // import './TodosList.css';
 
 
@@ -17,9 +18,9 @@ class TodosList extends React.Component {
 
   render() {
     return(
-      <>
-      Test
-      </>
+      <ul>
+        <TodoItem />
+      </ul>
     )
   }
 }
