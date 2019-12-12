@@ -5,22 +5,32 @@ TodoItem Component | TodosToaster Lab
 
 
 /* IMPORTS */
-import React from 'react';
+import React, { Component } from 'react';
 import './TodoItem.css';
 
 
 /* MAIN */
-const TodoItem = (props) => {
-  const { index, description } = props;
+class TodoItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-  return (
-    <li>
-      <p className="description">{description}</p>
-      <button type="button" id="btnDel" onClick={() => {
-          props.handleDelete(index);
-      }}>x</button>
-    </li>
-  );
+  componentWillUnmount = () => {
+    this.props.popNotification("delete", `Todo deleted: ${this.props.description}`)
+  }
+
+  render() {
+    const { idx, description } = this.props;
+    return (
+      <li>
+        <p className="description">{description}</p>
+        <button type="button" id="btnDel" onClick={() => {
+            this.props.handleDelete(idx);
+        }}>x</button>
+      </li>
+    );
+  }
 }
 
 

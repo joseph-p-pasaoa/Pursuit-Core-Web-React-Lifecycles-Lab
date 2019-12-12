@@ -6,8 +6,8 @@ APP | Todos Toaster Lab
 
 /* IMPORTS */
 import React, { Component } from 'react';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 import Form from './components/Form';
@@ -21,30 +21,36 @@ class App extends Component {
     super();
     this.state = {
       todos: [
-        { description: "I Need a Test of the Emergency Broadcast System So That's on the Itinerary" },
-        { description: "Buy pasture-raised organic milk. Whatever that is" },
-        { description: "Pickup the bairn from grandma's"}
+        { idx: 0, description: "I Need a Test of the Emergency Broadcast System So That's on the Itinerary" },
+        { idx: 1, description: "Buy pasture-raised organic milk. Whatever that is" },
+        { idx: 2, description: "Pickup the bairn from grandma's"}
       ],
+      nextIdx: 3,
       descriptionValue: ""
     }
   }
 
+  popNotification = (operation, msg) => {
+    toast(msg);
+  }
+
   handleDelete = (index) => {
-    let updatedTodos = this.state.todos;
-    updatedTodos.splice(index, 1);
+    let workingTodosCopy = this.state.todos;
+    workingTodosCopy[index] = null;
     this.setState({
-        todos: updatedTodos
+        todos: workingTodosCopy
     });
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { todos, descriptionValue } = this.state;
+    const { todos, nextIdx, descriptionValue } = this.state;
     if (descriptionValue && descriptionValue.trim()) {
-      const newDesc = { description: descriptionValue };
-      const newTodos = todos.concat(newDesc);
+      const newTodo = { idx: nextIdx, description: descriptionValue };
+      const newTodos = todos.concat(newTodo);
       this.setState({
           todos: newTodos,
+          nextIdx: nextIdx + 1,
           descriptionValue: ""
       });
     }
@@ -70,9 +76,11 @@ class App extends Component {
             descriptionValue={descriptionValue} 
           />
           <TodosList 
+            popNotification={this.popNotification} 
             handleDelete={this.handleDelete} 
             todos={todos} 
           />
+          <ToastContainer />
         </div>
       </div>
     );
