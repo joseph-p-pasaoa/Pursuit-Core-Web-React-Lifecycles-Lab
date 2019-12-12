@@ -24,4 +24,6 @@ p.todoValue {
 
 button {
   margin: 6px;
+  padding: 0px 3px 2px 3px;
+  color: #777;
 }

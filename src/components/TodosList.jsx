@@ -5,25 +5,28 @@ TodosList Component | TodosToaster Lab
 
 
 /* IMPORTS */
-import React, { Component } from 'react';
+import React from 'react';
 import TodoItem from './TodoItem';
 import './TodosList.css';
 
 
 /* MAIN */
-class TodosList extends Component {
-  // constructor() {
-  //   super();
-  // }
+const TodosList = (props) => {
+  const todoCards = props.todos.map((todo, index) => {
+      return (
+        <TodoItem 
+          key={index} 
+          handleDelete={props.handleDelete} 
+          descriptionValue={todo.descriptionValue} 
+        />
+      );
+  })
 
-  render() {
-    return(
-      <ul>
-        <TodoItem />
-        <TodoItem />
-      </ul>
-    )
-  }
+  return (
+    <ul>
+      {todoCards}
+    </ul>
+  )
 }
 
 

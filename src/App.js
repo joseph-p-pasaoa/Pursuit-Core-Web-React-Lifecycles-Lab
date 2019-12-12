@@ -5,9 +5,9 @@ APP | Todos Toaster Lab
 
 
 /* IMPORTS */
-import React from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React, { Component } from 'react';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 import Form from './components/Form';
@@ -16,15 +16,58 @@ import TodosList from './components/TodosList';
 
 
 /* MAIN */
-function App() {
-  return (
-    <div className="App">
-      <div id="flex-base">
-        <Form />
-        <TodosList />
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      todos: [
+        { description: "I Need a Test of the Emergency Broadcast System So That's on the Itinerary" },
+        { description: "Buy pasture-raised organic milk. Whatever that is" },
+        { description: "Pickup the bairn from grandma's"}
+      ],
+      descriptionValue: ""
+    }
+  }
+
+  handleDelete = (e) => {
+    
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { todos, descriptionValue } = this.state;
+    if (descriptionValue && descriptionValue.trim()) {
+      const newDesc = { description: descriptionValue };
+      const newTodos = todos.concat(newDesc);
+      this.setState({
+          todos: newTodos
+      });
+    }
+  }
+
+  handleChange = (e) => {
+    this.setState({ descriptionValue: e.target.value });
+  }
+
+  render() {
+    const { todos, descriptionValue } = this.state;
+
+    return (
+      <div className="App">
+        <div id="flex-base">
+          <Form 
+            handleSubmit={this.handleSubmit} 
+            handleChange={this.handleChange} 
+            descriptionValue={descriptionValue} 
+          />
+          <TodosList 
+            handleDelete={this.handleDelete} 
+            todos={todos} 
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 

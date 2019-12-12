@@ -5,32 +5,22 @@ TodoItem Component | TodosToaster Lab
 
 
 /* IMPORTS */
-import React, { Component } from 'react';
+import React from 'react';
 import './TodoItem.css';
 
 
 /* MAIN */
-class TodoItem extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: ""
-    }
-  }
+const TodoItem = (props) => {
+  const { key, descriptionValue } = props;
 
-  handleClick = (e) => {
-    console.dir(e.target.parentNode);
-  }
-
-  render() {
-    const { value } = this.state;
-    return(
-      <li>
-        <p className="todoValue">This Needs a Test of the Emergency Broadcast System So That's on the Itinerary{value}</p>
-        <button type="button" id="btnDel" onClick={this.handleClick}>x</button>
-      </li>
-    )
-  }
+  return(
+    <li>
+      <p className="description">{descriptionValue}</p>
+      <button type="button" id="btnDel" onClick={() => {
+          props.handleDelete(key);
+      }}>x</button>
+    </li>
+  )
 }
 
 
