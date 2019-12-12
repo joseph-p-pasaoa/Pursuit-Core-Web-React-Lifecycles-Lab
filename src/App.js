@@ -29,8 +29,12 @@ class App extends Component {
     }
   }
 
-  handleDelete = (e) => {
-    
+  handleDelete = (index) => {
+    let updatedTodos = this.state.todos;
+    updatedTodos.splice(index, 1);
+    this.setState({
+        todos: updatedTodos
+    });
   }
 
   handleSubmit = (e) => {
@@ -40,7 +44,8 @@ class App extends Component {
       const newDesc = { description: descriptionValue };
       const newTodos = todos.concat(newDesc);
       this.setState({
-          todos: newTodos
+          todos: newTodos,
+          descriptionValue: ""
       });
     }
   }

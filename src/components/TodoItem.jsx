@@ -13,14 +13,14 @@ import './TodoItem.css';
 const TodoItem = (props) => {
   const { index, description } = props;
 
-  return(
+  return (
     <li>
       <p className="description">{description}</p>
       <button type="button" id="btnDel" onClick={() => {
           props.handleDelete(index);
       }}>x</button>
     </li>
-  )
+  );
 }
 
 

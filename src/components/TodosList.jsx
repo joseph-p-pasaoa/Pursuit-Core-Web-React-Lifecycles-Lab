@@ -21,13 +21,13 @@ const TodosList = (props) => {
           description={todo.description} 
         />
       );
-  })
+  });
 
   return (
     <ul>
       {todoCards}
     </ul>
-  )
+  );
 }
 
 
