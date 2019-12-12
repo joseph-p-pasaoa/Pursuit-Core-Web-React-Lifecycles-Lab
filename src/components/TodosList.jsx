@@ -16,6 +16,7 @@ const TodosList = (props) => {
       return (
         <TodoItem 
           key={index} 
+          index={index} 
           handleDelete={props.handleDelete} 
           description={todo.description} 
         />
