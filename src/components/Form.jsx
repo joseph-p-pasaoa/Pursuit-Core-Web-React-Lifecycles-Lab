@@ -5,45 +5,28 @@ Form Component | TodosToaster Lab
 
 
 /* IMPORTS */
-import React, { Component } from 'react';
+import React from 'react';
 import './Form.css';
 
 
 /* MAIN */
-class Form extends Component {
-  constructor() {
-    super();
-    this.initialState = {
-      txtInput: ""
-    }
-    this.state = this.initialState;
-  }
+const Form = (props) => {
+  // handleChange = (e) => {
+  //   this.setState({
+  //       txtInput: e.target.value
+  //   });
+  // }
 
-  handleChange = (e) => {
-    this.setState({
-        txtInput: e.target.value
-    });
-  }
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.target[0].value);
-  }
-
-  render() {
-    const { txtInput } = this.state;
-    return (
-      <>
-      <header>
-        <h1>Todos Toaster</h1>
-      </header>
-      <p id="instructions">fill out a new todo entry below and hit <strong>enter</strong> to submit</p>
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" id="txtInput" value={txtInput} onChange={this.handleChange} placeholder="New Todo Item" />
-      </form>
-      </>
-    )
-  }
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(e.target[0].value);
+  // }
+  
+  return (
+    <form onSubmit={props.handleSubmit}>
+      <input type="text" id="txtInput" value={props.descriptionValue} onChange={props.handleChange} placeholder="New Todo Item" />
+    </form>
+  )
 }
 
 

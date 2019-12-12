@@ -55,6 +55,10 @@ class App extends Component {
     return (
       <div className="App">
         <div id="flex-base">
+          <header>
+            <h1>Todos Toaster</h1>
+          </header>
+          <p id="instructions">fill out a new todo entry below and hit <strong>enter</strong> to submit</p>
           <Form 
             handleSubmit={this.handleSubmit} 
             handleChange={this.handleChange} 

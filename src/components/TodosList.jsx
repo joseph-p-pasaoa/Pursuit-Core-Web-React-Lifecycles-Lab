@@ -17,7 +17,7 @@ const TodosList = (props) => {
         <TodoItem 
           key={index} 
           handleDelete={props.handleDelete} 
-          descriptionValue={todo.descriptionValue} 
+          description={todo.description} 
         />
       );
   })
