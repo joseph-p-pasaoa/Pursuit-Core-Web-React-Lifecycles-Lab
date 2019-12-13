@@ -11,8 +11,9 @@ li {
   justify-content: center;
   align-items: flex-start;
 
-  margin: 3px 6px;
-  border-radius: 7px;
+  margin: 6px;
+  padding: 6px 12px;
+  border-radius: 3px;
 
   background-color: aliceblue;
 }
@@ -22,8 +23,17 @@ p.todoValue {
   margin: 6px 12px;
 }
 
-button {
-  margin: 6px;
+li button {
+  position: relative;
+  top: -1px;
+  right: 0px;
+  margin-left: 8px;
   padding: 0px 3px 2px 3px;
-  color: #777;
+  
+  color: #333;
+  box-shadow: 0px 3px 5px #8eb1b5;
+}
+
+li button:hover {
+  color: red;
 }

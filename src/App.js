@@ -20,13 +20,23 @@ class App extends Component {
     super();
     this.state = {
       todos: [
-        { idx: 0, description: "I Need a Test of the Emergency Broadcast System So That's on the Itinerary" },
-        { idx: 1, description: "Buy pasture-raised organic milk. Whatever that is" },
-        { idx: 2, description: "Pickup the bairn from grandma's"}
+        { idx: 0, description: "Finish BASIC lab" },
+        { idx: 1, description: "Test of the Emergency Broadcast System" },
+        { idx: 2, description: "Buy pasture-raised grass-fed cow's milk and organic strawberries for Fiona" },
+        { idx: 3, description: "Pickup the bairn from grandma's"}
       ],
-      nextIdx: 3,
+      nextIdx: 4,
       descriptionValue: ""
     }
+  }
+
+  componentDidMount() {
+    toast(<>Copyright © 2019 by <strong>Joseph P. Pasaoa</strong>. All rights reserved.</>, {
+      position: 'top-left',
+      className: 'toastAuthor',
+      autoClose: false,
+      draggable: false
+    });
   }
 
   popNotification = (operation, msg) => {
@@ -72,6 +82,7 @@ class App extends Component {
         <div id="flex-base">
           <header>
             <h1>Todos Toaster</h1>
+            <p id="about-me">Copyright © 2019 by Joseph P. Pasaoa. All rights reserved.</p>
           </header>
           <p id="instructions">fill out a new todo entry below and hit <strong>enter</strong> to submit</p>
           <Form 
