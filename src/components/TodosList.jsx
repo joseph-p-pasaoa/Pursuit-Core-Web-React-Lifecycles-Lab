@@ -22,7 +22,7 @@ class TodosList extends Component {
     const currTodos = this.props.todos;
     if (currTodos.length > prevTodos.length) {
       const newTodoDesc = currTodos[currTodos.length - 1].description;
-      this.props.popNotification("add", `New Todo Created: ${newTodoDesc}`);
+      this.props.popNotification("add", <><strong>New Todo Created:</strong> {newTodoDesc}</>);
     }
   }
 

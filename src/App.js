@@ -14,7 +14,6 @@ import Form from './components/Form';
 import TodosList from './components/TodosList';
 
 
-
 /* MAIN */
 class App extends Component {
   constructor() {
@@ -31,7 +30,12 @@ class App extends Component {
   }
 
   popNotification = (operation, msg) => {
-    toast(msg);
+    toast(
+      msg, 
+      {
+        className: 'toastStatic ' + operation,
+        progressClassName: 'toastProgBar'
+      });
   }
 
   handleDelete = (index) => {
@@ -80,7 +84,7 @@ class App extends Component {
             handleDelete={this.handleDelete} 
             todos={todos} 
           />
-          <ToastContainer />
+          <ToastContainer autoClose={11000} />
         </div>
       </div>
     );

@@ -17,7 +17,7 @@ class TodoItem extends Component {
   }
 
   componentWillUnmount = () => {
-    this.props.popNotification("delete", `Todo deleted: ${this.props.description}`)
+    this.props.popNotification("delete", <><strong>Todo deleted:</strong> {this.props.description}</>)
   }
 
   render() {

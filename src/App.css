@@ -79,9 +79,59 @@ html, body, .App, div#flex-base {
 }
 
 .App {
-  text-align: center;
+	text-align: center;
+	font-family: 'Cabin', sans-serif;
+	
+}
+
+h1 {
+	font-size: 3em;
+	margin: 36px 12px;
+}
+
+p#instructions {
+  margin: 12px 12px 6px 12px;
+  font-size: 0.9em;
 }
 
 strong {
 	font-weight: bold;
+}
+
+.toastStatic {
+	min-height: 56px;
+	padding: 14px 8px 14px 40px;
+	border-radius: 20px 4px 4px 20px;
+	box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.6), 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+
+	line-height: 1.1em;
+	font-family: 'Cabin', sans-serif;
+	font-size: 0.95em;
+	color: #fff;
+}
+
+.add {
+	background-image: linear-gradient( 109.6deg,  rgba(0,0,0,1) 11.2%, rgba(0, 156, 41, 1) 100.3% );
+}
+
+.delete {
+	background-image: linear-gradient( 109.6deg,  rgba(0,0,0,1) 11.2%, rgba(247,30,30,1) 100.3% );
+}
+
+.Toastify strong {
+	font-weight: 900;
+	color: lightsteelblue;
+}
+
+.Toastify button {
+	position: relative;
+	top: -1px;
+	margin-top: 0px;
+	margin-right: 10px;
+
+	opacity: 0.5;
+}
+
+.toastProgBar {
+	background: linear-gradient(to right, #f009, #fa07, #ff5d);
 }
