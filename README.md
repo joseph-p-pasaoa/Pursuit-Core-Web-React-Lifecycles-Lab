@@ -1,5 +1,12 @@
 # Pursuit-Core-Web-React-Lifecycle-Methods-Lab
 
+### Completed MVP Screen Capture
+
+![My completed mvp screencap](./readme/screencap.png)
+
+---
+# Directions
+
 ## Demo
 ![todosLifecycleAppGif](./readme/todosLifecycleAppGif.gif)
 
